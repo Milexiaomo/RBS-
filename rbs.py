@@ -22,5 +22,7 @@ def  blog_post():
 @app.route('/blog_backstage/')
 def  blog_ba():
     return render_template("backstage/index.html")
+
+
 if  __name__=="__main__":
     app.run()
