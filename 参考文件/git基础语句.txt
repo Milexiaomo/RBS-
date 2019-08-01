@@ -1,0 +1,10 @@
+ssh-keygen -t rsa -C"email" 注册密匙
+git remote  add "url_name"  <url> 建立分支连接
+git fetch  <url_name> <branch_name> 下载git_hub内容
+git merge  <url_name>/<branch_name>将下载完毕的数据合并到指定分支中
+git push <url_name> <branch_name> 将指定分上传
+git remote -v 查看连接地址
+git remote  remove  "remote_name" 删除连接
+git add * 上传文件
+git commit -m "说明" 提交文件 
+mkdir 创建文件夹
