@@ -1,10 +1,11 @@
-ssh-keygen -t rsa -C"email" ×¢²áÃÜ³×
-git remote  add "url_name"  <url> ½¨Á¢·ÖÖ§Á¬½Ó
-git fetch  <url_name> <branch_name> ÏÂÔØgit_hubÄÚÈİ
-git merge  <url_name>/<branch_name>½«ÏÂÔØÍê±ÏµÄÊı¾İºÏ²¢µ½Ö¸¶¨·ÖÖ§ÖĞ
-git push <url_name> <branch_name> ½«Ö¸¶¨·ÖÉÏ´«
-git remote -v ²é¿´Á¬½ÓµØÖ·
-git remote  remove  "remote_name" É¾³ıÁ¬½Ó
-git add * ÉÏ´«ÎÄ¼ş
-git commit -m "ËµÃ÷" Ìá½»ÎÄ¼ş 
-mkdir ´´½¨ÎÄ¼ş¼Ğ
+ssh-keygen -t rsa -C"email" æ³¨å†Œå¯†åŒ™
+git remote  add "url_name"  <url> å»ºç«‹åˆ†æ”¯è¿æ¥
+git fetch  <url_name> <branch_name> ä¸‹è½½git_hubå†…å®¹
+git merge  <url_name>/<branch_name>å°†ä¸‹è½½å®Œæ¯•çš„æ•°æ®åˆå¹¶åˆ°æŒ‡å®šåˆ†æ”¯ä¸­
+git push <url_name> <branch_name> å°†æŒ‡å®šåˆ†ä¸Šä¼ 
+git remote -v æŸ¥çœ‹è¿æ¥åœ°å€
+git remote  remove  "remote_name" åˆ é™¤è¿æ¥
+git add * ä¸Šä¼ æ–‡ä»¶
+git commit -m "è¯´æ˜" æäº¤æ–‡ä»¶ 
+mkdir åˆ›å»ºæ–‡ä»¶å¤¹
+git branch -D åˆ†æ”¯å  åˆ é™¤æœ¬åœ°åˆ†æ”¯
