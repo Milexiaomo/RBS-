@@ -4808,7 +4808,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * Element.pause
 	     [ method ]
 	     **
-	     * Stops animation of the element with ability to resume it later on.
+	     * Stops animation of the element with ability to profile it later on.
 	     **
 	     > Parameters
 	     **
@@ -4825,7 +4825,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return this;
 	    };
 	    /*\
-	     * Element.resume
+	     * Element.profile
 	     [ method ]
 	     **
 	     * Resumes animation if it was paused with @Element.pause method.
@@ -4839,7 +4839,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    elproto.resume = function (anim) {
 	        for (var i = 0; i < animationElements.length; i++) if (animationElements[i].el.id == this.id && (!anim || animationElements[i].anim == anim)) {
 	            var e = animationElements[i];
-	            if (eve("raphael.anim.resume." + this.id, this, e.anim) !== false) {
+	            if (eve("raphael.anim.profile." + this.id, this, e.anim) !== false) {
 	                delete e.paused;
 	                this.status(e.anim, e.status);
 	            }

@@ -1,0 +1,54 @@
+{% extends "/reception/profile/base.html" %}
+{% block main_content %}
+    <section id="profile" class="item noprint">
+        <div class="row">
+            <h2 class="item-title"><span class="title">修改个人信息</span> <span class="icon-user"></span></h2>
+        </div>
+        <div class="row col" style="height:50px"></div>
+        <form action="#">
+            <div style="margin:0 auto">
+                <div class="form-group row" style="height:50px">
+                    <label for="username" class="col-md-2 col-form-label text-right" >姓名：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="text" class="form-control" id="username" placeholder="请输入姓名....">
+                    </div>
+                </div>
+                <div class="form-group row" style="height:50px">
+                    <label for="birthdate" class="col-sm-2 col-form-label text-right" >出生日期：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="text" class="form-control" id="birthdate" placeholder="请输入出生日期..."/>
+                    </div>
+                </div>
+                <div class="form-group row" style="height:50px">
+                    <label for="address" class="col-sm-2 col-form-label text-right" >地址：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="text" class="form-control" id="address" placeholder="家庭地址..."/>
+                    </div>
+                </div>
+                <div class="form-group row" style="height:50px">
+                    <label for="email" class="col-sm-2 col-form-label text-right" >邮箱：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="email" class="form-control" id="email" placeholder="邮箱账户..."/>
+                    </div>
+                </div>
+                <div class="form-group row" style="height:50px">
+                    <label for="email" class="col-sm-2 col-form-label text-right" >电话：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="number" class="form-control" id="email" placeholder="电话号码..."/>
+                    </div>
+                </div>
+                <div class="form-group row" style="height:50px">
+                    <label for="email" class="col-sm-2 col-form-label text-right" >职业：</label>
+                    <div class="col-md-6 input-group-sm">
+                        <input type="text" class="form-control" id="email" placeholder="职业..."/>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section><!-- /#profile -->
+
+{%  endblock %}
+{% block script %}
+
+{% endblock %}

@@ -16,16 +16,18 @@ class  DB:
         c=DB.get_db().cursor()
         c.executte(sql,prms)
         c.connection.commit()
+        DB.close_connection()
 
     #执行用于选择数据的sql
     def query_sql(sql,prms=(),single_strip=False):
         c=DB.get_db().cursor()
-        print("游标运行正常")
         if single_strip is False:
             datas=c.execute(sql,prms).fetchall()
+            DB.close_connection()
             return datas
         else:
             data=c.execute(sql,prms).fetchone()
+            DB.close_connection()
             return data
 
 

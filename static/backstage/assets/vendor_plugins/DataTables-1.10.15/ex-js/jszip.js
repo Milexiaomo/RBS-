@@ -2387,7 +2387,7 @@ GenericWorker.prototype = {
         }
         this.isPaused = false;
 
-        // if true, the worker tried to resume but failed
+        // if true, the worker tried to profile but failed
         var withError = false;
         if(this.generatedError) {
             this.error(this.generatedError);

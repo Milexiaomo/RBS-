@@ -26514,7 +26514,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // start the flow if it hasn't been started already.
 	  if (!state.flowing) {
-	    debug('pipe resume');
+	    debug('pipe profile');
 	    src.resume();
 	  }
 
@@ -26612,7 +26612,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  self.read(0);
 	}
 
-	// pause() and resume() are remnants of the legacy readable stream API
+	// pause() and profile() are remnants of the legacy readable stream API
 	// If the user uses them, then switch into old mode.
 	Readable.prototype.resume = function () {
 	  var state = this._readableState;
@@ -26633,7 +26633,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function resume_(stream, state) {
 	  if (!state.reading) {
-	    debug('resume read 0');
+	    debug('profile read 0');
 	    stream.read(0);
 	  }
 

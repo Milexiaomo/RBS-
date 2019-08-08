@@ -2513,7 +2513,7 @@ var LuaHighlightRules = function() {
         "atan2|exp|sin|atan|getupvalue|debug|sethook|getmetatable|"+
         "gethook|setmetatable|setlocal|traceback|setfenv|getinfo|"+
         "setupvalue|getlocal|getregistry|getfenv|setn|insert|getn|"+
-        "foreachi|maxn|foreach|concat|sort|remove|resume|yield|"+
+        "foreachi|maxn|foreach|concat|sort|remove|profile|yield|"+
         "status|wrap|create|running|"+
         "__add|__sub|__mod|__unm|__concat|__lt|__index|__call|__gc|__metatable|"+
          "__mul|__div|__pow|__len|__eq|__le|__newindex|__tostring|__mode|__tonumber"
