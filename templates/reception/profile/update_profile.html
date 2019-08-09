@@ -1,54 +1,155 @@
 {% extends "/reception/profile/base.html" %}
 {% block main_content %}
     <section id="profile" class="item noprint">
-        <div class="row">
-            <h2 class="item-title"><span class="title">修改个人信息</span> <span class="icon-user"></span></h2>
-        </div>
-        <div class="row col" style="height:50px"></div>
-        <form action="#">
-            <div style="margin:0 auto">
-                <div class="form-group row" style="height:50px">
-                    <label for="username" class="col-md-2 col-form-label text-right" >姓名：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="text" class="form-control" id="username" placeholder="请输入姓名....">
-                    </div>
-                </div>
-                <div class="form-group row" style="height:50px">
-                    <label for="birthdate" class="col-sm-2 col-form-label text-right" >出生日期：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="text" class="form-control" id="birthdate" placeholder="请输入出生日期..."/>
-                    </div>
-                </div>
-                <div class="form-group row" style="height:50px">
-                    <label for="address" class="col-sm-2 col-form-label text-right" >地址：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="text" class="form-control" id="address" placeholder="家庭地址..."/>
-                    </div>
-                </div>
-                <div class="form-group row" style="height:50px">
-                    <label for="email" class="col-sm-2 col-form-label text-right" >邮箱：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="email" class="form-control" id="email" placeholder="邮箱账户..."/>
-                    </div>
-                </div>
-                <div class="form-group row" style="height:50px">
-                    <label for="email" class="col-sm-2 col-form-label text-right" >电话：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="number" class="form-control" id="email" placeholder="电话号码..."/>
-                    </div>
-                </div>
-                <div class="form-group row" style="height:50px">
-                    <label for="email" class="col-sm-2 col-form-label text-right" >职业：</label>
-                    <div class="col-md-6 input-group-sm">
-                        <input type="text" class="form-control" id="email" placeholder="职业..."/>
-                    </div>
-                </div>
+            <div class="row">
+                <h2 class="item-title"><span class="title">修改个人信息</span> <span class="icon-user"></span></h2>
             </div>
-        </form>
+            <div class="row col" style="height:50px"></div>
+            <form action="#" name="reg_date">
+                <div class="card" style="border:none;background:none;">
+                    <div class="card-body">
+                        <div class="form-group row "  >
+                            <label for="header_png" class="col-md-2 col-form-label text-right text-bottom" >头像：</label>
+                            <img src="/reception/images/user_images/profile-img.jpg" height="200" width="200"/>
+                            <div class="col-md-6 input-group-sm">
+                                <input type="file"  id="header_png" >
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group row" style="height:50px">
+                            <label for="username" class="col-md-2 col-form-label text-right" >姓名：</label>
+                            <div class="col-md-6 input-group-sm">
+                                <input type="text" class="form-control" id="username" placeholder="请输入姓名....">
+                            </div>
+                        </div>
+                        <div class="form-group row" style="height:50px">
+                            <label for="birthdate" class="col-sm-2 col-form-label text-right" >出生日期：</label>
+                            <div class="col-md-6 input-group-sm">
+                                <select name="year" onchange="YYYYDD(this.value)" class="custom-select-sm" >
+                                    <option value="">-- 请选择 年 --</option>
+                                </select>
+                                <select name="month" onchange="MMDD(this.value)" class="custom-select-sm">
+                                    <option value="" title="">-- 请选择 月 --</option>
+                                </select>
+                                <select name="days" class="custom-select-sm">
+                                    <option value="">-- 请选择 日 --</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div class="form-group row" style="height:50px">
+                                <label for="address" class="col-sm-2 col-form-label text-right" >地址：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <input type="text" class="form-control" id="address" placeholder="家庭地址..."/>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="height:50px">
+                                <label for="email" class="col-sm-2 col-form-label text-right" >邮箱：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <input type="email" class="form-control" id="email" placeholder="邮箱账户..."/>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="height:50px">
+                                <label for="email" class="col-sm-2 col-form-label text-right" >电话：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <input type="number" class="form-control" id="email" placeholder="电话号码..."/>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="height:50px">
+                                <label for="freelance" class="col-sm-2 col-form-label text-right" >职业：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <select name="freelance" id="freelance"  class="custom-select-sm" >
+                                        <option value="">-- 请选择 职业 --</option>
+                                        <option value="">-- JAVA工程师 --</option>
+                                        <option value="">-- Python工程师 --</option>
+                                        <option value="">-- 职业规划师 --</option>
+                                        <option value="">-- 幼教 --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row col-lg-4 text-right" style="height:40px">
+                                <p align="right" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自我介绍：</p>
+                            </div>
+                            <div class="form-group row" style="height:50px">
+                                <label for="profile-title" class="col-sm-2 col-form-label text-right" >标题：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <input type="text" class="form-control" id="profile-title" placeholder="请输入标题..."/>
+                                </div>
+                            </div>
+                            <div class="form-group row" style="height:220px">
+                                <label for="profile-text" class="col-sm-2 col-form-label text-right" >内容：</label>
+                                <div class="col-md-6 input-group-sm">
+                                    <textarea  class="form-control" id="profile-text" rows="10" placeholder="自我介绍..."/></textarea>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="card-fotter ">
+                        <div class="form-group row ">
+                            <div  class="col-md-12 offset-3">
+                                <input type="submit" class="btn" value="提交" />
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="reset"  class="btn" value="重置"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
 
     </section><!-- /#profile -->
 
 {%  endblock %}
 {% block script %}
+    <script language="JavaScript"><!--
+   function YYYYMMDDstart()
+   {
+           MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+           //先给年下拉框赋内容
+           var y  = new Date().getFullYear();
+           for (var i = (y-30); i < (y+30); i++) //以今年为准，前30年，后30年
+                   document.reg_date.year.options.add(new Option(" "+ i +" 年", i));
+
+           //赋月份的下拉框
+           for (var i = 1; i < 13; i++)
+                   document.reg_date.month.options.add(new Option(" " + i + " 月", i));
+
+           {#document.reg_date.year.value = y;#}
+           {#document.reg_date.month.value = new Date().getMonth() + 1;#}
+           var n = MonHead[new Date().getMonth()];
+           if (new Date().getMonth() ==1 && IsPinYear(YYYYvalue)) n++;
+                writeDay(n); //赋日期下拉框Author:meizz
+           {#document.reg_date.days.value = new Date().getDate();#}
+   }
+   if(document.attachEvent)
+       window.attachEvent("onload", YYYYMMDDstart);
+   else
+       window.addEventListener('load', YYYYMMDDstart, false);
+   function YYYYDD(str) //年发生变化时日期发生变化(主要是判断闰平年)
+   {
+           var MMvalue = document.reg_date.month.options[document.reg_date.month.selectedIndex].value;
+           if (MMvalue == ""){ var e = document.reg_date.days; optionsClear(e); return;}
+           var n = MonHead[MMvalue - 1];
+           if (MMvalue ==2 && IsPinYear(str)) n++;
+                writeDay(n)
+   }
+   function MMDD(str)   //月发生变化时日期联动
+   {
+        var YYYYvalue = document.reg_date.year.options[document.reg_date.year.selectedIndex].value;
+        if (YYYYvalue == ""){ var e = document.reg_date.days; optionsClear(e); return;}
+        var n = MonHead[str - 1];
+        if (str ==2 && IsPinYear(YYYYvalue)) n++;
+       writeDay(n)
+   }
+   function writeDay(n)   //据条件写日期的下拉框
+   {
+           var e = document.reg_date.days; optionsClear(e);
+           for (var i=1; i<(n+1); i++)
+                e.options.add(new Option(" "+ i + " 日", i));
+   }
+   function IsPinYear(year)//判断是否闰平年
+   {     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}
+   function optionsClear(e)
+   {
+        e.options.length = 1;
+   }
+   //--></script>
 {% endblock %}
