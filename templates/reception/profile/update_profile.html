@@ -8,12 +8,15 @@
             <form action="#" name="reg_date">
                 <div class="card" style="border:none;background:none;">
                     <div class="card-body">
-                        <div class="form-group row "  >
-                            <label for="header_png" class="col-md-2 col-form-label text-right text-bottom" >头像：</label>
-                            <img src="/reception/images/user_images/profile-img.jpg" height="200" width="200"/>
-                            <div class="col-md-6 input-group-sm">
-                                <input type="file"  id="header_png" >
+                        <div class="form-group row  "  >
+                            <div class="col-lg-8 ">
+                                <label for="header_png" class="col-md-2 offset-1 col-form-label" > &nbsp; 头像：</label>
+                                <img src="/reception/images/user_images/profile-img.jpg" height="200" width="200"/>
+                                     <div class="input-group-sm col-md-2 offset-3">
+                                         <input type="file"  id="header_png"  />
+                                    </div>
                             </div>
+
                         </div>
                         <br/>
                         <div class="form-group row" style="height:50px">
@@ -26,7 +29,7 @@
                             <label for="birthdate" class="col-sm-2 col-form-label text-right" >出生日期：</label>
                             <div class="col-md-6 input-group-sm">
                                 <select name="year" onchange="YYYYDD(this.value)" class="custom-select-sm" >
-                                    <option value="">-- 请选择 年 --</option>
+                                    <option value="" >-- 请选择 年 --</option>
                                 </select>
                                 <select name="month" onchange="MMDD(this.value)" class="custom-select-sm">
                                     <option value="" title="">-- 请选择 月 --</option>
