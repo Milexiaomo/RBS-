@@ -1,12 +1,9 @@
 from flask import Blueprint,render_template
-from user.models import Personal
+from user.models import user_login
 
 
-user_profile=Blueprint("user_profile",__name__)
+user=Blueprint("user",__name__)
 
-@user_profile.route("/profile/")
-def profile():
-    p=Personal()
-    datas=p.personal_data()
-    return render_template("backstage/index.html",datas=datas)
+user.add_url_rule("/login/",view_func=user_login.as_view("user_login"))
+
 

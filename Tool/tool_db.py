@@ -14,7 +14,7 @@ class  DB:
     #执行sql语句不返回结果
     def execute_sql(sql,prms=()):
         c=DB.get_db().cursor()
-        c.executte(sql,prms)
+        c.execute(sql,prms)
         c.connection.commit()
         DB.close_connection()
 

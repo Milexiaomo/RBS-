@@ -20,12 +20,12 @@
 
                             <div class="col260 fl-right">
                                 <ul class="profile-data">
-                                    <li><h4>name</h4> <div>Amanda Smith</div></li>
-                                    <li><h4>Age</h4> <div>25</div></li>
-                                    <li><h4>Address</h4> <div>England, London, Street 27, UK</div></li>
-                                    <li><h4>E-mail</h4> <div>amandasmith@mail.com</div></li>
-                                    <li><h4>phone</h4> <div>+1 256 254 84 56</div></li>
-                                    <li><h4>freelance</h4> <div>Available</div></li>
+                                    <li><h4>name</h4> <div>{{ datas[0] }}</div></li>
+                                    <li><h4>Age</h4> <div>{{  datas[1] }}</div></li>
+                                    <li><h4>Address</h4> <div>{{ datas[2] }}</div></li>
+                                    <li><h4>E-mail</h4> <div>{{ datas[3] }}</div></li>
+                                    <li><h4>phone</h4> <div>{{ datas[4] }}</div></li>
+                                    <li><h4>freelance</h4> <div>{{ datas[5] }}</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -550,26 +550,26 @@
         </div>
 
         <!-- google map -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script>
-            var map;
-            var myLatlng = new google.maps.LatLng(50.850340, 4.351710);
-            function initialize() {
-                var mapOptions = {
-                    zoom: 16,
-                    center: myLatlng,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    icon: 'images/map-pointer.png',
-                    title: 'vCard marker'
-                });
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
+{#        <script type="text/javascript" src="#"></script>#}
+{#        <script>#}
+{#            var map;#}
+{#            var myLatlng = new google.maps.LatLng(50.850340, 4.351710);#}
+{#            function initialize() {#}
+{#                var mapOptions = {#}
+{#                    zoom: 16,#}
+{#                    center: myLatlng,#}
+{#                    mapTypeId: google.maps.MapTypeId.ROADMAP#}
+{#                }#}
+{#                map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);#}
+{#                var marker = new google.maps.Marker({#}
+{#                    position: myLatlng,#}
+{#                    map: map,#}
+{#                    icon: 'images/map-pointer.png',#}
+{#                    title: 'vCard marker'#}
+{#                });#}
+{#            }#}
+{#            google.maps.event.addDomListener(window, 'load', initialize);#}
+{#        </script>#}
 
 {% endblock %}
 
