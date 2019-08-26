@@ -40,6 +40,17 @@
     <p class="login-box-msg">登录已开始您的会话</p>
 
     <form action="{{ url_for("user.user_login") }}" method="post" class="form-element">
+        {% with messages=get_flashed_messages()   %}
+            {% if messages %}
+                {% for msg in messages %}
+                     <div class="alert alert-warning">
+                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                        {{ msg }}
+                     </div>
+                {% endfor %}
+             {% endif %}
+        {% endwith %}
+
       <div class="form-group has-feedback">
         <input type="email" class="form-control" name="email" placeholder="邮箱">
         <span class="ion ion-email form-control-feedback"></span>
